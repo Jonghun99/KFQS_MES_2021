@@ -73,8 +73,6 @@ namespace KFQS_Form
 
                 dtTemp = _Common.GET_ItemCodeFERT_Code("UNITCODE");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "ITEMCODE", dtTemp, "CODE_ID", "CODE_NAME");
-
-                // 데이터 테이블에 있는 데이터를 해당 콤보박스에 추가.
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
                 cboPlantCede_H.Value = LoginInfo.PlantCode;

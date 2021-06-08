@@ -1,7 +1,7 @@
 ﻿
 namespace KFQS_Form
 {
-    partial class BM_WorkList
+    partial class MM_StockMM
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -42,27 +42,21 @@ namespace KFQS_Form
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            this.cboPlantCede_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
+            this.cboPlantCode_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
-            this.txtWorkerID_H = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.txtItemCode = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel2 = new Infragistics.Win.Misc.UltraLabel();
             this.ultraLabel3 = new Infragistics.Win.Misc.UltraLabel();
-            this.txtWorkerName_H = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.txtItemName = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.grid1 = new DC00_Component.Grid(this.components);
-            this.cboUseFlag_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
-            this.ultraLabel5 = new Infragistics.Win.Misc.UltraLabel();
-            this.cboBanCode_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
-            this.ultraLabel4 = new Infragistics.Win.Misc.UltraLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).BeginInit();
             this.gbxHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxBody)).BeginInit();
             this.gbxBody.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboPlantCede_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerID_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerName_H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode_H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboBanCode_H)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxHeader
@@ -71,16 +65,12 @@ namespace KFQS_Form
             this.gbxHeader.ContentPadding.Left = 2;
             this.gbxHeader.ContentPadding.Right = 2;
             this.gbxHeader.ContentPadding.Top = 4;
-            this.gbxHeader.Controls.Add(this.ultraLabel5);
-            this.gbxHeader.Controls.Add(this.cboUseFlag_H);
-            this.gbxHeader.Controls.Add(this.ultraLabel4);
-            this.gbxHeader.Controls.Add(this.cboBanCode_H);
             this.gbxHeader.Controls.Add(this.ultraLabel3);
-            this.gbxHeader.Controls.Add(this.txtWorkerName_H);
+            this.gbxHeader.Controls.Add(this.txtItemName);
             this.gbxHeader.Controls.Add(this.ultraLabel2);
-            this.gbxHeader.Controls.Add(this.txtWorkerID_H);
+            this.gbxHeader.Controls.Add(this.txtItemCode);
             this.gbxHeader.Controls.Add(this.ultraLabel1);
-            this.gbxHeader.Controls.Add(this.cboPlantCede_H);
+            this.gbxHeader.Controls.Add(this.cboPlantCode_H);
             this.gbxHeader.Size = new System.Drawing.Size(1136, 115);
             // 
             // gbxBody
@@ -93,13 +83,13 @@ namespace KFQS_Form
             this.gbxBody.Location = new System.Drawing.Point(0, 115);
             this.gbxBody.Size = new System.Drawing.Size(1136, 710);
             // 
-            // cboPlantCede_H
+            // cboPlantCode_H
             // 
-            this.cboPlantCede_H.Location = new System.Drawing.Point(99, 21);
-            this.cboPlantCede_H.Name = "cboPlantCede_H";
-            this.cboPlantCede_H.Size = new System.Drawing.Size(144, 35);
-            this.cboPlantCede_H.TabIndex = 0;
-            this.cboPlantCede_H.Text = "ultraComboEditor1";
+            this.cboPlantCode_H.Location = new System.Drawing.Point(99, 21);
+            this.cboPlantCode_H.Name = "cboPlantCode_H";
+            this.cboPlantCode_H.Size = new System.Drawing.Size(144, 35);
+            this.cboPlantCode_H.TabIndex = 0;
+            this.cboPlantCode_H.Text = "ultraComboEditor1";
             // 
             // ultraLabel1
             // 
@@ -109,35 +99,35 @@ namespace KFQS_Form
             this.ultraLabel1.TabIndex = 1;
             this.ultraLabel1.Text = "공장";
             // 
-            // txtWorkerID_H
+            // txtItemCode
             // 
-            this.txtWorkerID_H.Location = new System.Drawing.Point(366, 21);
-            this.txtWorkerID_H.Name = "txtWorkerID_H";
-            this.txtWorkerID_H.Size = new System.Drawing.Size(124, 35);
-            this.txtWorkerID_H.TabIndex = 2;
+            this.txtItemCode.Location = new System.Drawing.Point(99, 69);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(124, 35);
+            this.txtItemCode.TabIndex = 2;
             // 
             // ultraLabel2
             // 
-            this.ultraLabel2.Location = new System.Drawing.Point(310, 25);
+            this.ultraLabel2.Location = new System.Drawing.Point(43, 73);
             this.ultraLabel2.Name = "ultraLabel2";
             this.ultraLabel2.Size = new System.Drawing.Size(50, 23);
             this.ultraLabel2.TabIndex = 3;
-            this.ultraLabel2.Text = "사번";
+            this.ultraLabel2.Text = "품목";
             // 
             // ultraLabel3
             // 
-            this.ultraLabel3.Location = new System.Drawing.Point(506, 25);
+            this.ultraLabel3.Location = new System.Drawing.Point(262, 73);
             this.ultraLabel3.Name = "ultraLabel3";
             this.ultraLabel3.Size = new System.Drawing.Size(85, 23);
             this.ultraLabel3.TabIndex = 5;
-            this.ultraLabel3.Text = "작업자 명";
+            this.ultraLabel3.Text = "품목 명";
             // 
-            // txtWorkerName_H
+            // txtItemName
             // 
-            this.txtWorkerName_H.Location = new System.Drawing.Point(597, 21);
-            this.txtWorkerName_H.Name = "txtWorkerName_H";
-            this.txtWorkerName_H.Size = new System.Drawing.Size(124, 35);
-            this.txtWorkerName_H.TabIndex = 4;
+            this.txtItemName.Location = new System.Drawing.Point(353, 69);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(124, 35);
+            this.txtItemName.TabIndex = 4;
             // 
             // grid1
             // 
@@ -222,70 +212,32 @@ namespace KFQS_Form
             this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
-            // cboUseFlag_H
-            // 
-            this.cboUseFlag_H.Location = new System.Drawing.Point(366, 66);
-            this.cboUseFlag_H.Name = "cboUseFlag_H";
-            this.cboUseFlag_H.Size = new System.Drawing.Size(144, 35);
-            this.cboUseFlag_H.TabIndex = 8;
-            this.cboUseFlag_H.Text = "ultraComboEditor3";
-            // 
-            // ultraLabel5
-            // 
-            this.ultraLabel5.Location = new System.Drawing.Point(279, 72);
-            this.ultraLabel5.Name = "ultraLabel5";
-            this.ultraLabel5.Size = new System.Drawing.Size(81, 23);
-            this.ultraLabel5.TabIndex = 9;
-            this.ultraLabel5.Text = "사용 여부";
-            // 
-            // cboBanCode_H
-            // 
-            this.cboBanCode_H.Location = new System.Drawing.Point(99, 66);
-            this.cboBanCode_H.Name = "cboBanCode_H";
-            this.cboBanCode_H.Size = new System.Drawing.Size(144, 35);
-            this.cboBanCode_H.TabIndex = 6;
-            this.cboBanCode_H.Text = "ultraComboEditor2";
-            // 
-            // ultraLabel4
-            // 
-            this.ultraLabel4.Location = new System.Drawing.Point(30, 72);
-            this.ultraLabel4.Name = "ultraLabel4";
-            this.ultraLabel4.Size = new System.Drawing.Size(63, 23);
-            this.ultraLabel4.TabIndex = 7;
-            this.ultraLabel4.Text = "작업 반";
-            // 
-            // BM_WorkList
+            // MM_StockMM
             // 
             this.ClientSize = new System.Drawing.Size(1136, 825);
-            this.Name = "BM_WorkList";
+            this.Name = "MM_StockMM";
             this.Text = "작업자 마스터";
-            this.Load += new System.EventHandler(this.BM_WorkList_Load);
+            this.Load += new System.EventHandler(this.MM_StockMM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
             this.gbxHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxBody)).EndInit();
             this.gbxBody.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cboPlantCede_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerID_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerName_H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode_H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboUseFlag_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboBanCode_H)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Infragistics.Win.Misc.UltraLabel ultraLabel3;
-        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtWorkerName_H;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtItemName;
         private Infragistics.Win.Misc.UltraLabel ultraLabel2;
-        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtWorkerID_H;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtItemCode;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;
-        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboPlantCede_H;
+        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboPlantCode_H;
         private DC00_Component.Grid grid1;
-        private Infragistics.Win.Misc.UltraLabel ultraLabel5;
-        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboUseFlag_H;
-        private Infragistics.Win.Misc.UltraLabel ultraLabel4;
-        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboBanCode_H;
     }
 }
