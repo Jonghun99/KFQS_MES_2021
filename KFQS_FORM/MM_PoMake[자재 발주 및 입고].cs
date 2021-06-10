@@ -136,8 +136,6 @@ namespace KFQS_Form
             grid1.ActiveRow.Cells["CHK"].Activation = Activation.NoEdit;
             grid1.ActiveRow.Cells["LOTNO"].Activation = Activation.NoEdit;
             grid1.ActiveRow.Cells["INDATE"].Activation = Activation.NoEdit;
-            //grid1.ActiveRow.Cells["INWORKER"].Activation = Activation.NoEdit;
-
             grid1.ActiveRow.Cells["MAKER"].Activation    = Activation.NoEdit;
             grid1.ActiveRow.Cells["MAKEDATE"].Activation = Activation.NoEdit;
             grid1.ActiveRow.Cells["EDITDATE"].Activation = Activation.NoEdit;
