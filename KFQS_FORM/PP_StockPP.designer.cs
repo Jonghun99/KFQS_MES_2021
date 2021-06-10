@@ -1,6 +1,6 @@
 ﻿namespace KFQS_Form
 {
-    partial class MM_StockOut_M
+    partial class PP_StockPP
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -43,27 +43,12 @@
             Infragistics.Win.Appearance appearance67 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             this.grid1 = new DC00_Component.Grid(this.components);
             this.txtLotNo = new System.Windows.Forms.TextBox();
             this.sLabel2 = new DC00_Component.SLabel();
             this.cboPlantCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.sLabel3 = new DC00_Component.SLabel();
-            this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
-            this.cboStoreageLocCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
-            this.sLabel20 = new DC00_Component.SLabel();
-            this.cboWhCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
-            this.sLabel32 = new DC00_Component.SLabel();
-            this.dtEnd_H = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
-            this.dtStart_H = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
-            this.sLabel4 = new DC00_Component.SLabel();
-            this.lblDate = new DC00_Component.SLabel();
             this.cboItemCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.lblItemCode = new DC00_Component.SLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).BeginInit();
@@ -72,12 +57,6 @@
             this.gbxBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
-            this.ultraGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboStoreageLocCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboWhCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEnd_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart_H)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboItemCode)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +68,6 @@
             this.gbxHeader.ContentPadding.Top = 4;
             this.gbxHeader.Controls.Add(this.cboItemCode);
             this.gbxHeader.Controls.Add(this.lblItemCode);
-            this.gbxHeader.Controls.Add(this.dtEnd_H);
-            this.gbxHeader.Controls.Add(this.dtStart_H);
-            this.gbxHeader.Controls.Add(this.sLabel4);
-            this.gbxHeader.Controls.Add(this.lblDate);
-            this.gbxHeader.Controls.Add(this.ultraGroupBox1);
             this.gbxHeader.Controls.Add(this.txtLotNo);
             this.gbxHeader.Controls.Add(this.sLabel2);
             this.gbxHeader.Controls.Add(this.cboPlantCode);
@@ -151,12 +125,12 @@
             appearance61.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.grid1.DisplayLayout.Override.ActiveRowAppearance = appearance61;
             this.grid1.DisplayLayout.Override.AllowDelete = Infragistics.Win.DefaultableBoolean.True;
-            this.grid1.DisplayLayout.Override.AllowMultiCellOperations = ((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation)((((((((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Copy | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.CopyWithHeaders)
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Cut)
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Delete)
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Paste)
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Undo)
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Redo)
+            this.grid1.DisplayLayout.Override.AllowMultiCellOperations = ((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation)((((((((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Copy | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.CopyWithHeaders) 
+            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Cut) 
+            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Delete) 
+            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Paste) 
+            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Undo) 
+            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Redo) 
             | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Reserved)));
             this.grid1.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.grid1.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
@@ -205,7 +179,7 @@
             this.txtLotNo.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.txtLotNo.Location = new System.Drawing.Point(476, 53);
             this.txtLotNo.Name = "txtLotNo";
-            this.txtLotNo.Size = new System.Drawing.Size(313, 25);
+            this.txtLotNo.Size = new System.Drawing.Size(313, 30);
             this.txtLotNo.TabIndex = 5;
             // 
             // sLabel2
@@ -231,7 +205,7 @@
             this.cboPlantCode.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.cboPlantCode.Location = new System.Drawing.Point(112, 20);
             this.cboPlantCode.Name = "cboPlantCode";
-            this.cboPlantCode.Size = new System.Drawing.Size(145, 27);
+            this.cboPlantCode.Size = new System.Drawing.Size(145, 32);
             this.cboPlantCode.TabIndex = 0;
             this.cboPlantCode.Text = "cboPlantCode";
             // 
@@ -253,130 +227,12 @@
             this.sLabel3.TabIndex = 231;
             this.sLabel3.Text = "공장";
             // 
-            // ultraGroupBox1
-            // 
-            this.ultraGroupBox1.Controls.Add(this.cboStoreageLocCode);
-            this.ultraGroupBox1.Controls.Add(this.sLabel20);
-            this.ultraGroupBox1.Controls.Add(this.cboWhCode);
-            this.ultraGroupBox1.Controls.Add(this.sLabel32);
-            this.ultraGroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ultraGroupBox1.Location = new System.Drawing.Point(4, 86);
-            this.ultraGroupBox1.Name = "ultraGroupBox1";
-            this.ultraGroupBox1.Size = new System.Drawing.Size(1122, 62);
-            this.ultraGroupBox1.TabIndex = 237;
-            // 
-            // cboStoreageLocCode
-            // 
-            this.cboStoreageLocCode.Font = new System.Drawing.Font("맑은 고딕", 10F);
-            this.cboStoreageLocCode.Location = new System.Drawing.Point(472, 18);
-            this.cboStoreageLocCode.Name = "cboStoreageLocCode";
-            this.cboStoreageLocCode.Size = new System.Drawing.Size(145, 27);
-            this.cboStoreageLocCode.TabIndex = 7;
-            // 
-            // sLabel20
-            // 
-            appearance32.FontData.BoldAsString = "False";
-            appearance32.FontData.UnderlineAsString = "False";
-            appearance32.ForeColor = System.Drawing.Color.Black;
-            appearance32.TextHAlignAsString = "Right";
-            appearance32.TextVAlignAsString = "Middle";
-            this.sLabel20.Appearance = appearance32;
-            this.sLabel20.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.None;
-            this.sLabel20.DbField = null;
-            this.sLabel20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sLabel20.Location = new System.Drawing.Point(353, 22);
-            this.sLabel20.Name = "sLabel20";
-            this.sLabel20.RequireFlag = DC00_Component.SLabel.RequireFlagEnum.NO;
-            this.sLabel20.Size = new System.Drawing.Size(113, 23);
-            this.sLabel20.TabIndex = 614;
-            this.sLabel20.Text = "출고저장위치";
-            // 
-            // cboWhCode
-            // 
-            this.cboWhCode.Font = new System.Drawing.Font("맑은 고딕", 10F);
-            this.cboWhCode.Location = new System.Drawing.Point(108, 19);
-            this.cboWhCode.Name = "cboWhCode";
-            this.cboWhCode.Size = new System.Drawing.Size(145, 27);
-            this.cboWhCode.TabIndex = 6;
-            // 
-            // sLabel32
-            // 
-            appearance3.FontData.BoldAsString = "False";
-            appearance3.FontData.UnderlineAsString = "False";
-            appearance3.ForeColor = System.Drawing.Color.Black;
-            appearance3.TextHAlignAsString = "Right";
-            appearance3.TextVAlignAsString = "Middle";
-            this.sLabel32.Appearance = appearance3;
-            this.sLabel32.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.None;
-            this.sLabel32.DbField = null;
-            this.sLabel32.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sLabel32.Location = new System.Drawing.Point(19, 21);
-            this.sLabel32.Name = "sLabel32";
-            this.sLabel32.RequireFlag = DC00_Component.SLabel.RequireFlagEnum.NO;
-            this.sLabel32.Size = new System.Drawing.Size(83, 23);
-            this.sLabel32.TabIndex = 613;
-            this.sLabel32.Text = "출고 창고";
-            // 
-            // dtEnd_H
-            // 
-            this.dtEnd_H.DateButtons.Add(dateButton1);
-            this.dtEnd_H.Location = new System.Drawing.Point(644, 20);
-            this.dtEnd_H.Name = "dtEnd_H";
-            this.dtEnd_H.NonAutoSizeHeight = 26;
-            this.dtEnd_H.Size = new System.Drawing.Size(145, 24);
-            this.dtEnd_H.TabIndex = 2;
-            this.dtEnd_H.TextChanged += new System.EventHandler(this.dtStart_H_TextChanged);
-            // 
-            // dtStart_H
-            // 
-            this.dtStart_H.DateButtons.Add(dateButton2);
-            this.dtStart_H.Location = new System.Drawing.Point(476, 20);
-            this.dtStart_H.Name = "dtStart_H";
-            this.dtStart_H.NonAutoSizeHeight = 26;
-            this.dtStart_H.Size = new System.Drawing.Size(145, 24);
-            this.dtStart_H.TabIndex = 1;
-            this.dtStart_H.TextChanged += new System.EventHandler(this.dtStart_H_TextChanged);
-            // 
-            // sLabel4
-            // 
-            appearance4.FontData.BoldAsString = "False";
-            appearance4.FontData.UnderlineAsString = "False";
-            appearance4.ForeColor = System.Drawing.Color.Black;
-            appearance4.TextHAlignAsString = "Center";
-            this.sLabel4.Appearance = appearance4;
-            this.sLabel4.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.None;
-            this.sLabel4.DbField = null;
-            this.sLabel4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sLabel4.Location = new System.Drawing.Point(624, 23);
-            this.sLabel4.Name = "sLabel4";
-            this.sLabel4.RequireFlag = DC00_Component.SLabel.RequireFlagEnum.NO;
-            this.sLabel4.Size = new System.Drawing.Size(17, 26);
-            this.sLabel4.TabIndex = 241;
-            this.sLabel4.Text = "~";
-            // 
-            // lblDate
-            // 
-            appearance5.FontData.BoldAsString = "False";
-            appearance5.FontData.UnderlineAsString = "False";
-            appearance5.ForeColor = System.Drawing.Color.Black;
-            appearance5.TextHAlignAsString = "Right";
-            appearance5.TextVAlignAsString = "Middle";
-            this.lblDate.Appearance = appearance5;
-            this.lblDate.DbField = null;
-            this.lblDate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblDate.Location = new System.Drawing.Point(387, 22);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.RequireFlag = DC00_Component.SLabel.RequireFlagEnum.NO;
-            this.lblDate.Size = new System.Drawing.Size(83, 23);
-            this.lblDate.TabIndex = 240;
-            this.lblDate.Text = "입/출고일자";
-            // 
             // cboItemCode
             // 
             this.cboItemCode.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.cboItemCode.Location = new System.Drawing.Point(112, 53);
             this.cboItemCode.Name = "cboItemCode";
-            this.cboItemCode.Size = new System.Drawing.Size(269, 27);
+            this.cboItemCode.Size = new System.Drawing.Size(269, 32);
             this.cboItemCode.TabIndex = 621;
             // 
             // lblItemCode
@@ -397,13 +253,13 @@
             this.lblItemCode.TabIndex = 620;
             this.lblItemCode.Text = "품목";
             // 
-            // MM_StockOut_M
+            // PP_StockPP
             // 
             this.ClientSize = new System.Drawing.Size(1136, 778);
-            this.Name = "MM_StockOut_M";
+            this.Name = "PP_StockPP";
             this.Padding = new System.Windows.Forms.Padding(3);
-            this.Text = "생산출고 등록/취소";
-            this.Load += new System.EventHandler(this.MM_StockOut_M_Load);
+            this.Text = "자재 출고 등록/취소";
+            this.Load += new System.EventHandler(this.PP_StockPP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
             this.gbxHeader.PerformLayout();
@@ -411,13 +267,6 @@
             this.gbxBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).EndInit();
-            this.ultraGroupBox1.ResumeLayout(false);
-            this.ultraGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboStoreageLocCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboWhCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEnd_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart_H)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboItemCode)).EndInit();
             this.ResumeLayout(false);
 
@@ -429,15 +278,6 @@
         private DC00_Component.SLabel sLabel2;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cboPlantCode;
         private DC00_Component.SLabel sLabel3;
-        private Infragistics.Win.Misc.UltraGroupBox ultraGroupBox1;
-        private Infragistics.Win.UltraWinSchedule.UltraCalendarCombo dtEnd_H;
-        private Infragistics.Win.UltraWinSchedule.UltraCalendarCombo dtStart_H;
-        private DC00_Component.SLabel sLabel4;
-        private DC00_Component.SLabel lblDate;
-        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboStoreageLocCode;
-        private DC00_Component.SLabel sLabel20;
-        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboWhCode;
-        private DC00_Component.SLabel sLabel32;
         private DC00_Component.Grid grid1;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cboItemCode;
         private DC00_Component.SLabel lblItemCode;

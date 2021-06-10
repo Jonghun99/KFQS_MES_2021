@@ -12,18 +12,25 @@ namespace KFQS_Form
 {
     public partial class MM_PoMake : DC00_WinForm.BaseMDIChildForm
     {
+        #region < MEMBER AREA >
         // 그리드를 셋팅 할 수 있도록 도와주는 함수 클래스
+        Common _Common = new Common();
+        DataTable dtTemp = new DataTable();
         UltraGridUtil _GridUtil = new UltraGridUtil();
         //공장 변수 입력
-        //private sPlantCode = LoginInfo.
+        //string plantCode = LoginInfo.PlantCode;
+        #endregion
+        #region < CONSTRUCTOR >
         public MM_PoMake()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region < FORM EVENTS >
         private void MM_PoMake_Load(object sender, EventArgs e)
         {
-            // 그리드를 셋팅한다.
+
             try
             {
                 _GridUtil.InitializeGrid(this.grid1, false, true, false, "", false);
@@ -44,45 +51,47 @@ namespace KFQS_Form
                 _GridUtil.InitColumnUltraGrid(grid1, "MAKER",     "등록자",       true, GridColDataType_emu.VarChar,130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtil.InitColumnUltraGrid(grid1, "EDITDATE",  "수정일시",     true, GridColDataType_emu.VarChar,130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtil.InitColumnUltraGrid(grid1, "EDITOR",    "수정자",       true, GridColDataType_emu.VarChar,130, 130, Infragistics.Win.HAlign.Left, true, false);
-                //셋팅 내역 그리드와 바인딩
                 _GridUtil.SetInitUltraGridBind(grid1); //셋팅 내역 그리드와 바인딩
 
-                Common _Common = new Common();
-                DataTable dtTemp = new DataTable();
-                // PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
+                #region ▶ COMBOBOX ◀
+                // #1. PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
                 dtTemp = _Common.Standard_CODE("PLANTCODE"); 
                 // 데이터 테이블에 있는 데이터를 해당 콤보박스에 추가.
                 Common.FillComboboxMaster(this.cboPlantCede_H, dtTemp, 
                                           dtTemp.Columns["CODE_ID"].ColumnName, 
                                           dtTemp.Columns["CODE_NAME"].ColumnName, 
                                           "ALL","");
+                // 그리드에 있는 해당컬럼에 콤보박스 형태로 데이터 등록
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "PLANTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
+                // #2. UNITCODE(단위)
                 dtTemp = _Common.Standard_CODE("UNITCODE");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "UNITCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
-                // 데이터 테이블에 표현할 데이터 가져오기
-                dtTemp = _Common.GET_TB_CUSTMATTER_CODE("");
-                // 조회에 있는 콤보박스 컨트롤에 데이터 등록
+                // #3. CUSTCODE(거래처)
+                dtTemp = _Common.GET_TB_CUSTMATTER_CODE("CUSTCODE");
                 Common.FillComboboxMaster(this.cboCust_H, dtTemp,
                                           dtTemp.Columns["CODE_ID"].ColumnName,
                                           dtTemp.Columns["CODE_NAME"].ColumnName,
                                           "ALL", "");
-                // 그리드에 있는 해당컬럼에 콤보박스 형태로 데이터 등록
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
-                dtTemp = _Common.GET_ItemCodeFERT_Code("UNITCODE");
+                // #4. ITEMCODE(발주품목코드)
+                dtTemp = _Common.GET_ItemCodeFERT_Code("ITEMCODE");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "ITEMCODE", dtTemp, "CODE_ID", "CODE_NAME");
-                UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
+                #endregion
 
+                #region ▶ ENTER-MOVE ◀
                 cboPlantCede_H.Value = LoginInfo.PlantCode;
                 dtpStart.Value = string.Format("{0:yyyy-MM-01}", DateTime.Now);
+                #endregion
             }
             catch (Exception ex)
             {
                 ShowDialog(ex.Message, DC00_WinForm.DialogForm.DialogType.OK);
             }
         }
+        #endregion
         public override void DoInquire()
         {
             base.DoInquire();
