@@ -147,7 +147,7 @@ namespace KFQS_Form
                 if (dt == null)
                     return;
 
-            DBHelper helper = new DBHelper("", false);
+            DBHelper helper = new DBHelper("", true);
 
             try
             {

@@ -206,6 +206,7 @@
             this.grid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
             this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.grid1.AfterRowActivate += new System.EventHandler(this.grid1_AfterRowActivate_1);
             // 
             // ultraLabel1
             // 
@@ -372,6 +373,7 @@
             this.btnLotIn.Size = new System.Drawing.Size(122, 47);
             this.btnLotIn.TabIndex = 190;
             this.btnLotIn.Text = "투입";
+            this.btnLotIn.Click += new System.EventHandler(this.btnLotIn_Click);
             // 
             // ultraLabel7
             // 
@@ -403,6 +405,7 @@
             this.btnWorker.Size = new System.Drawing.Size(173, 47);
             this.btnWorker.TabIndex = 189;
             this.btnWorker.Text = "작업자 등록";
+            this.btnWorker.Click += new System.EventHandler(this.btnWorker_Click);
             // 
             // ultraLabel5
             // 

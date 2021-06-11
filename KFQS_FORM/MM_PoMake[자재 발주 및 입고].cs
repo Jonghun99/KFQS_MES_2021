@@ -57,10 +57,7 @@ namespace KFQS_Form
                 // #1. PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
                 dtTemp = _Common.Standard_CODE("PLANTCODE"); 
                 // 데이터 테이블에 있는 데이터를 해당 콤보박스에 추가.
-                Common.FillComboboxMaster(this.cboPlantCede_H, dtTemp, 
-                                          dtTemp.Columns["CODE_ID"].ColumnName, 
-                                          dtTemp.Columns["CODE_NAME"].ColumnName, 
-                                          "ALL","");
+                Common.FillComboboxMaster(this.cboPlantCede_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName, dtTemp.Columns["CODE_NAME"].ColumnName, "ALL","");
                 // 그리드에 있는 해당컬럼에 콤보박스 형태로 데이터 등록
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "PLANTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
@@ -69,15 +66,12 @@ namespace KFQS_Form
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "UNITCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
                 // #3. CUSTCODE(거래처)
-                dtTemp = _Common.GET_TB_CUSTMATTER_CODE("CUSTCODE");
-                Common.FillComboboxMaster(this.cboCust_H, dtTemp,
-                                          dtTemp.Columns["CODE_ID"].ColumnName,
-                                          dtTemp.Columns["CODE_NAME"].ColumnName,
-                                          "ALL", "");
+                dtTemp = _Common.GET_TB_CUSTMATTER_CODE("");
+                Common.FillComboboxMaster(this.cboCust_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName, dtTemp.Columns["CODE_NAME"].ColumnName, "ALL", "");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
                 // #4. ITEMCODE(발주품목코드)
-                dtTemp = _Common.GET_ItemCodeFERT_Code("ITEMCODE");
+                dtTemp = _Common.GET_ItemCodeFERT_Code("ROH");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "ITEMCODE", dtTemp, "CODE_ID", "CODE_NAME");
                 #endregion
 
