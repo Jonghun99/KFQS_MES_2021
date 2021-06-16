@@ -1,6 +1,6 @@
 ﻿namespace KFQS_Form
 {
-    partial class MM_STockMM_M
+    partial class PP_StockHALB
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -251,13 +251,13 @@
             this.cboItemCode.Size = new System.Drawing.Size(145, 32);
             this.cboItemCode.TabIndex = 187;
             // 
-            // MM_STockMM_M
+            // PP_StockHALB
             // 
             this.ClientSize = new System.Drawing.Size(1298, 778);
-            this.Name = "MM_STockMM_M";
+            this.Name = "PP_StockHALB";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "자재 재고 관리";
-            this.Load += new System.EventHandler(this.MM_STockMM_M_Load);
+            this.Load += new System.EventHandler(this.PP_StockHALB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
             this.gbxHeader.PerformLayout();
