@@ -46,6 +46,30 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="WM_Inspection[수입 검사 결과 등록].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_Inspection[수입 검사 결과 등록].designer.cs">
+      <DependentUpon>WM_Inspection[수입 검사 결과 등록].cs</DependentUpon>
+    </Compile>
+    <Compile Include="WM_StockOutWM[제품 출고 처리].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockOutWM[제품 출고 처리].designer.cs">
+      <DependentUpon>WM_StockOutWM[제품 출고 처리].cs</DependentUpon>
+    </Compile>
+    <Compile Include="WM_StockWM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockWM.designer.cs">
+      <DependentUpon>WM_StockWM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WM_ProdinStock[제품 창고 입고 등록].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_ProdinStock[제품 창고 입고 등록].designer.cs">
+      <DependentUpon>WM_ProdinStock[제품 창고 입고 등록].cs</DependentUpon>
+    </Compile>
     <Compile Include="PP_STockHALB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +172,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="WM_StockWM_M[제품재고 관리 및 상차 등록].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockWM_M[제품재고 관리 및 상차 등록].designer.cs">
+      <DependentUpon>WM_StockWM_M[제품재고 관리 및 상차 등록].cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DC00_assm, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
@@ -206,6 +236,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="WM_Inspection[수입 검사 결과 등록].resx">
+      <DependentUpon>WM_Inspection[수입 검사 결과 등록].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_StockOutWM[제품 출고 처리].resx">
+      <DependentUpon>WM_StockOutWM[제품 출고 처리].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_StockWM.resx">
+      <DependentUpon>WM_StockWM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_ProdinStock[제품 창고 입고 등록].resx">
+      <DependentUpon>WM_ProdinStock[제품 창고 입고 등록].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PP_STockHALB.resx">
       <DependentUpon>PP_STockHALB.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +300,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_StockWM_M[제품재고 관리 및 상차 등록].resx">
+      <DependentUpon>WM_StockWM_M[제품재고 관리 및 상차 등록].cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

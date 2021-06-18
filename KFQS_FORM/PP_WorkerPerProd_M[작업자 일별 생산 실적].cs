@@ -111,7 +111,7 @@ namespace KFQS_Form
                 string sStartDate  = string.Format("{0:yyyy-MM-dd}", dtStartDate.Value);
                 string sEndDate    = string.Format("{0:yyyy-MM-dd}", dtEnddate.Value);
 
-                rtnDtTemp = helper.FillTable("18PP_WorkerPerProd_S1", CommandType.StoredProcedure
+                rtnDtTemp = helper.FillTable("00PP_WorkerPerProd_S1", CommandType.StoredProcedure
                                     , helper.CreateParameter("PLANTCODE",  sPlantCode,  DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("WORKER",     sWorker,     DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("STARTDATE",  sStartDate,  DbType.String, ParameterDirection.Input)
